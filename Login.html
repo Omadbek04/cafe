@@ -8,6 +8,44 @@
     <script defer src="./main.js"></script>
   </head>
   <body>
-    
+    <div class="login">
+      <form>
+        <!-- Inputni yashirish uchun labelni faollashtirish -->
+        <label class="login_user_img" for="img_input">
+          <!-- Input elementini yashirish uchun -->
+          <input type="file" id="img_input" accept="image/*" onchange="onFileSelected(event)" />
+          <img id="myimage" src="#" alt="No image selected" height="200" />
+          <span class="login_user_title">Tizimga kirish</span>
+        </label>
+
+        <input id="login-pin" type="text" placeholder="Enter your PIN" class="login_pin" readonly />
+      </form>
+
+      <div class="login_btns_wrpaer">
+        <div class="login_btns">
+          <button id="login-btn1">1</button>
+          <button id="login-btn2">2</button>
+          <button id="login-btn3">3</button>
+        </div>
+        <div class="login_btns">
+          <button id="login-btn4">4</button>
+          <button id="login-btn5">5</button>
+          <button id="login-btn6">6</button>
+        </div>
+        <div class="login_btns">
+          <button id="login-btn7">7</button>
+          <button id="login-btn8">8</button>
+          <button id="login-btn9">9</button>
+        </div>
+        <div class="login_btns">
+          <button id="login-allDelete">C</button>
+          <button id="login-btn0">0</button>
+          <button id="login-deleteOne">
+            <img src="./icons/backspace.svg" alt="backspace icon" />
+          </button>
+        </div>
+        <button class="login_btns_unlock">Unlock</button>
+      </div>
+    </div>
   </body>
 </html>
