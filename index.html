@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./main.css" />
-		<title>Cafe</title>
-		<script defer src="./main.js"></script>
-	</head>
-	<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe</title>
+
+    <!-- birinchi sahifa tezroq yuklanishi uchun internal usulda css yozilgan faqat bosh sahifa uchun -->
+    <style>
+      .unplush {
+        background-image: url(./imgs/Background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        background-position: center center;
+        height: 100vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+      .unplush_time {
+        font-size: 200px;
+        font-weight: 400;
+      }
+      .pm {
+        font-size: 40px !important ;
+        text-transform: uppercase;
+        font-weight: 300 !important;
+      }
+      .unplush_year {
+        font-size: 30px;
+        letter-spacing: 4px;
+      }
+    </style>
+    <script defer src="./main.js"></script>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <section class="unplush">
+      <div class="unplush_time">
+        <span class="unplush_time" id="clock"></span>
+        <span class="unplush_time">:</span>
+        <span class="unplush_time" id="minute"></span>
+        <span class="pm" id="pm_am"></span>
+      </div>
+      <div class="unplush_year">
+        <span id="week"></span>
+        <span id="monts"></span>
+        <span id="year"></span>
+      </div>
+    </section>
   </body>
 </html>
