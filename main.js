@@ -86,3 +86,28 @@ buttons.forEach((button) => {
     button.classList.add("active_dropdown");
   });
 });
+
+// modal ochilishi va yopilishi funcsyasi
+// Modal elementini olish
+const modal = document.getElementById("order_modal");
+const buyurtma = document.getElementById("buyurtma");
+buyurtma.addEventListener("click", () => openModal());
+// Modalni yopish funksiyasi
+const closeModal = (event) => {
+  // Agar tashqi modaldan bosilgan bo'lsa yoki `Escape` tugmasi bosilgan bo'lsa, modalni yopish
+  if (event?.target === modal || !event) {
+    modal.style.display = "none";
+  }
+};
+
+// ESC tugmasi bilan modalni yopish
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
+
+// Modalni ochish (kerak bo'lsa)
+const openModal = () => {
+  modal.style.display = "flex";
+};

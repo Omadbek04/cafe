@@ -359,7 +359,6 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
-
 }
 .order_card {
   display: flex;
@@ -387,10 +386,199 @@ a {
   line-height: 24px;
   color: var(--primary-color-orange);
 }
-.order_main{
+.order_main {
   overflow-y: scroll;
   margin-bottom: 50px;
 }
+
+.order_sidebar {
+  width: 360px;
+  border-left: 1px solid rgba(228, 228, 228, 1) !important;
+  position: relative;
+  height: 100%;
+}
+.order_sidebar_wrapper {
+  padding: 24px;
+}
+.order_sidebar_wrapper:last-child {
+  border: none !important;
+}
+.order_sidebar_card {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(228, 228, 228, 1);
+  width: Fixed (312px) px;
+  height: Hug (106px) px;
+  padding: 16px 0px 16px 0px;
+  gap: 12px;
+}
+.order_sidebar_card_header {
+}
+.order_sidebar__card_title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.order_sidebar__card_span {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--primary-color-gray);
+}
+.order_sidebar__card_price {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color-orange);
+}
+.order_sidebar_btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.order_sidebar_btns_minus {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  gap: 8px;
+  border-radius: 58px;
+  background: rgba(228, 228, 228, 1);
+  color: var(--primary-color-gray);
+  font-size: 15px;
+}
+.order_sidebar_count {
+  color: rgba(25, 25, 28, 1);
+  font-size: 14px;
+  font-weight: 600;
+}
+.order_sidebar_btns_plus {
+  background: rgba(25, 25, 28, 1);
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  gap: 8px;
+  border-radius: 58px;
+  color: white;
+  cursor: pointer;
+}
+.order_sidebar_bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 150px;
+  padding: 24px;
+  border-top: 1px solid rgba(228, 228, 228, 1);
+}
+.order_sidebar_bottom_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dashed rgba(228, 228, 228, 1);
+  padding-bottom: 2px;
+}
+.order_btn {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0px;
+  color: white;
+  background-color: var(--primary-color-orange);
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* order modal  ----------------------------------------------------*/
+.order_modal {
+  display: none ;
+  transition: all ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  backdrop-filter: blur(2px);
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.order_modal_wrapper {
+  background: rgba(255, 255, 255, 1);
+  width: 470px;
+  height: 367px;
+  padding: 24px;
+  border-radius: 16px;
+}
+.order_modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order_modal-header p {
+  font-size: 15px;
+}
+.order_modal-header span {
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.order_modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 220px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.order_modal-body-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed black;
+}
+.order_modal-body-item span {
+  font-size: 14px;
+}
+.order_modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.order_print_out {
+  background-color: var(--primary-color-orange);
+  width: 190px;
+  height: 44px;
+  gap: 10px;
+  border-radius: 58px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order_close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 44px;
+  gap: 10px;
+  border-radius: 58px;
+  font-size: 15px;
+  color: var(--primary-color-orange);
+  cursor: pointer;
+  border: 1px solid rgba(255, 92, 0, 1);
+  background-color: transparent;
+}
+
+/* closemodal */
 
 /* media  */
 @media screen and (max-width: 1130px) {

@@ -102,7 +102,6 @@
 
         <div class="main_outlet_bottom order_main">
           <div class="main__outlet_wrapper order">
-          
             <div class="order_card">
               <img class="order_card_img" src="./imgs/Image.png" alt="order img" />
               <h4 class="order_card_title">Ikan santan</h4>
@@ -113,7 +112,6 @@
       </section>
 
       <section class="sidebar_right">
-
         <div class="dropdown">
           <div class="toggle-container">
             <button class="toggle-btn active_dropdown">Qo'shish</button>
@@ -121,11 +119,49 @@
           </div>
         </div>
 
-        <div class="sidebar_right_bottom">
-          
-        </div>
+        <div class="order_sidebar">
+          <div class="order_sidebar_wrapper">
+            <div class="order_sidebar_card">
+              <div class="order_sidebar_card_header">
+                <h4 class="order_sidebar__card_title">Ikan santan</h4>
+                <span class="order_sidebar__card_span">Narxi</span>
+                <p class="order_sidebar__card_price">115 122 UZS</p>
+              </div>
+              <div class="order_sidebar_btns">
+                <button class="order_sidebar_btns_minus">--</button>
+                <span class="order_sidebar_count">5</span>
+                <button class="order_sidebar_btns_plus">+</button>
+              </div>
+            </div>
+          </div>
 
+          <div class="order_sidebar_bottom">
+            <div class="order_sidebar_bottom_price">
+              <span>Jami</span>
+              <span>1147 0000</span>
+            </div>
+            <button  id="buyurtma" class="order_btn">Buyurtma qilish</button>
+          </div>
+        </div>
       </section>
     </main>
+    <div class="order_modal" id="order_modal" onclick="closeModal()">
+      <div class="order_modal_wrapper">
+        <div class="order_modal-header">
+          <p>Buyurtmani chop etish</p>
+          <span onclick="closeModal()">x</span>
+        </div>
+        <ul class="order_modal-body">
+          <li class="order_modal-body-item">
+            <p>#Chicken Gril</p>
+            <span>2dona.</span>
+          </li>
+        </ul>
+        <div class="order_modal-footer">
+          <a href="#" onclick="closeModal()" class="order_print_out" id="order_print_out">Chop etish</a>
+          <a href="#" onclick="closeModal()" class="order_close" id="close_modal">Yopish</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
