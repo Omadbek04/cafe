@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   buttons.forEach((button) => {
     button.addEventListener("click", function () {
       const buttonValue = this.textContent;
-      
+
       // "C" tugmasi barcha qiymatni tozalash
       if (this.id === "login-allDelete") {
         pinInput.value = "";
@@ -69,5 +69,20 @@ document.addEventListener("DOMContentLoaded", function () {
         pinInput.value += buttonValue;
       }
     });
+  });
+});
+
+/// dropdown
+// Barcha tugmalarni olish
+const buttons = document.querySelectorAll(".toggle-btn");
+
+// Tugmalarni bosilganda aktiv qilish funksiyasi
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Hamma tugmalardan "active" klassini olib tashlash
+    buttons.forEach((btn) => btn.classList.remove("active_dropdown"));
+
+    // Bosilgan tugmaga "active" klassini qo'shish
+    button.classList.add("active_dropdown");
   });
 });
