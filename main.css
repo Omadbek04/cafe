@@ -1,11 +1,20 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-body {
-  font-family: sans-serif;
+
+/* o'zgaruvchilar  */
+
+:root {
+ --primary-color-orange: rgba(255, 92, 0, 1);
 }
+
+body {
+  font-family: "Poppins", serif !important;
+}
+
 ol,
 ul,
 input,
@@ -15,6 +24,12 @@ a {
   border: none;
   outline: none;
   text-decoration: none;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 24px;
+  margin: auto;
 }
 
 /* Login page styles */
@@ -88,8 +103,9 @@ a {
   backdrop-filter: blur(10px);
 }
 .login_btns_unlock {
+  text-align: center;
   border-radius: 54px;
-  height: 48px;
+  padding: 20px 0px;
   background: rgba(255, 92, 0, 1);
   color: white;
   cursor: pointer;
@@ -97,4 +113,44 @@ a {
 .login_btns_unlock:hover {
   opacity: 0.9;
   transition: all ease-in-out;
+}
+
+/* navbar css  codes*/
+.navbar{
+  padding: 20px 0px;
+}
+.navbar_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar_logo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.navbar_logo-icon + span {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.navbar_links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.avtive{
+ color: var(--primary-color-orange);
+}
+.navbar_links-item a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* justify-content: space-between; */
+}
+.navbar_profile {
+  display: flex;
+  align-items: center;
 }
