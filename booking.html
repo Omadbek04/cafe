@@ -66,7 +66,7 @@
         </div>
       </section>
 
-      <section class="main_outlet">
+      <section class="main_outlet booking">
         <div class="main_outlet_top">
           <p class="main_outlet_top-text">
             <span class="span">Bosh sahifa /</span>
@@ -87,34 +87,165 @@
         </div>
         <div class="main_outlet_bottom">
           <div class="main__outlet_wrapper">
-            <div class="main__outlet_wrapper__card">
+            <div class="main__outlet_wrapper__card" id="add_new_reservition">
               <div class="main__outlet_wrapper__card-header"></div>
               <div class="main__outlet_wrapper__card-body">
                 <p>1-stol</p>
               </div>
               <div class="main__outlet_wrapper__card-header"></div>
             </div>
-            <div class="main__outlet_wrapper__card">
-              <div class="main__outlet_wrapper__card-header"></div>
-              <div class="main__outlet_wrapper__card-body">
-                <p>2-stol</p>
-              </div>
-              <div class="main__outlet_wrapper__card-header"></div>
-            </div>
           </div>
         </div>
+
+        <!-- booking reservation modal -->
       </section>
-      <section class="sidebar_right">
-        <div class="dropdown">
+
+      <section class="booking-rigth-sidebar">
+        <div class="dropdown bookin-dropdown">
           <div class="toggle-container">
-            <a href="./order2.html" class="toggle-btn" >Buyurtma</a>
-            <a href="./booking.html" class="toggle-btn active_dropdown" >Bron qilish</a>
+            <a href="./order2.html" class="toggle-btn">Buyurtma</a>
+            <a href="./booking.html" class="toggle-btn active_dropdown">Bron qilish</a>
           </div>
-        </div>
-        <div class="sidebar_right_bottom">
-          <img src="./imgs/noprodcutsadded.png" alt="no product image" />
         </div>
       </section>
     </main>
+
+    <div class="reservation-panel" id="reservation-panel" >
+
+      <div class="reservation-panel_wrapper-modal"  id="reservation-panel_wrapper-modal">
+        <div class="reservation-panel_wrapper" id="reservation-panel_wrapper">
+          <div class="reservation-header">
+            <span>Select date:</span>
+            <input type="date" />
+          </div>
+
+          <ul class="reservation-body-list">
+            <li class="reservation-body-list-item-th">
+              <span>Customer name</span>
+              <span>time</span>
+              <span>table</span>
+              <span>order</span>
+            </li>
+            <li class="reservation-body-list-item">
+              <span> Matilda R</span>
+              <span>8:00Am</span>
+              <span>t-11</span>
+              <div class="reservation-body-list-item-user">
+                <img src="./icons/user.svg" alt="user" />
+                <span>11</span>
+              </div>
+            </li>
+          </ul>
+          <button class="add-reservation-btn" onclick="continueReservationPanel()">Add new reservation</button>
+        </div>
+      </div>
+
+      <!-- new reservation -->
+      <div class="new_reservation" id="new_reservation">
+        <div class="new_reservation_header">
+          <p>New reservation</p>
+          <span onclick="closeReservationPanel()">x</span>
+        </div>
+
+        <form class="new_reservation_form">
+          <label class="new_reservation_form-fullname">
+            <span>Full name</span>
+            <input type="text" placeholder="Enter name" />
+          </label>
+
+          <div class="new_reservation_form_wrapper">
+            <label class="new_reservation_form_email">
+              <span>Email</span>
+              <input type="email" placeholder="Enter email address" />
+            </label>
+
+            <label class="new_reservation_form_email">
+              <span>Phone number</span>
+              <input type="text" placeholder="Enter phone number" />
+            </label>
+          </div>
+        </form>
+
+        <div class="new_reservation_table">
+          <p>Time slot available</p>
+          <table border="1" >
+            <tbody>
+              <tr>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+                <td>
+                  <p>09:00</p>
+                  <span>AM</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="new_reservation-btn">
+          <button onclick="closeReservationPanel()" class="order_print_out new_reservation-btn_cancel">Cancel</button>
+          <a href="./newProduct.html" class="order_close new_reservation-btn_cancel">Continue</a>
+        </div>
+      </div>
+
+    </div> 
   </body>
 </html>

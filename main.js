@@ -134,6 +134,38 @@ const endorder_modal_orderOpen = () => {
 };
 
 // Bosish hodisasini biriktirish
-buyurtmani_yakunlash.addEventListener("click", () => {
+buyurtmani_yakunlash?.addEventListener("click", () => {
   endOrderdOpenModal();
 });
+
+// bron qilish modali
+const reservation_panel = document.getElementById("reservation-panel");
+const reservation_panel_wrapper_modal = document.getElementById("reservation-panel_wrapper-modal");
+const new_reservation = document.getElementById("new_reservation");
+const add_new_reservition = document.getElementById("add_new_reservition");
+const reservation_panel_wrapper = document.getElementById("reservation-panel_wrapper");
+
+// Modalni ochish
+const openReservationPanel = () => {
+  reservation_panel.style.display = "block";
+  reservation_panel_wrapper.style.transform = "translateX(0)";
+};
+
+// Modalni yopish
+const closeReservationPanel = (event) => {
+  if (event?.target === reservation_panel || !event) {
+    reservation_panel.style.display = "none";
+    reservation_panel_wrapper.style.transform = "translate(0)";
+    new_reservation.style.display = "none"; // Har ehtimolga qarshi yangi modalni yopish
+    reservation_panel_wrapper_modal.style.display = "block"; // 1-bosqichni ko'rsatish
+  }
+};
+
+// Keyingi bosqichga o'tish
+const continueReservationPanel = () => {
+  reservation_panel_wrapper_modal.style.display = "none"; // 1-bosqichni yashirish
+  new_reservation.style.display = "block"; // 2-bosqichni ko'rsatish
+};
+
+// "Add new reservation" tugmasi bosilganda
+add_new_reservition?.addEventListener("click", () => openReservationPanel());
