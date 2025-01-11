@@ -114,8 +114,8 @@
       <section class="sidebar_right">
         <div class="dropdown">
           <div class="toggle-container">
-            <a href="./orders.html" class="toggle-btn active_dropdown">Qo'shish</a>
-            <a href="./endorder.html" class="toggle-btn">Yakunlash</a>
+            <a href="./orders.html" class="toggle-btn">Qo'shish</a>
+            <a href="./endorder.html" class="toggle-btn active_dropdown">Yakunlash</a>
           </div>
         </div>
 
@@ -125,13 +125,8 @@
               <div class="order_sidebar_card_header">
                 <h4 class="order_sidebar__card_title">Ikan santan</h4>
                 <span class="order_sidebar__card_span">Narxi</span>
-                <p class="order_sidebar__card_price">115 122 UZS</p>
               </div>
-              <div class="order_sidebar_btns">
-                <button class="order_sidebar_btns_minus">--</button>
-                <span class="order_sidebar_count">5</span>
-                <button class="order_sidebar_btns_plus">+</button>
-              </div>
+              <p class="order_sidebar__card_price">115 122 UZS</p>
             </div>
           </div>
 
@@ -140,26 +135,36 @@
               <span>Jami</span>
               <span>1147 0000</span>
             </div>
-            <button  id="buyurtma" class="order_btn">Buyurtma qilish</button>
+            <button id="buyurtmani_yakunlash" class="order_btn">Buyurtmani yakunlash</button>
           </div>
         </div>
       </section>
     </main>
-    <div class="order_modal" id="order_modal" onclick="closeModal()">
-      <div class="order_modal_wrapper">
-        <div class="order_modal-header">
-          <p>Buyurtmani chop etish</p>
-          <span onclick="closeModal()">x</span>
+
+    <div class="endorder_modal" id="endorder_modal" >
+      <div class="endorder_modal_wraper">
+        <div class="endorder_modal-close" id="endorder_modal-close">
+          <div class="order_modal-header">
+            <p>Buyurtmani yakunlash</p>
+            <span  onclick="endOrderdCloseModal()">x</span>
+          </div>
+          <p>Siz rostdan ham ushbu buyurtmani yakunlamoqchimisiz?</p>
+          <div class="order_modal-footer">
+            <button class="order_print_out" onclick="endorder_modal_orderOpen()">Xa</button>
+            <button class="order_close"  onclick="endOrderdCloseModal()">Yoq</button>
+          </div>
         </div>
-        <ul class="order_modal-body">
-          <li class="order_modal-body-item">
-            <p>#Chicken Gril</p>
-            <span>2dona.</span>
-          </li>
-        </ul>
-        <div class="order_modal-footer">
-          <a href="./order2.html" onclick="closeModal()" class="order_print_out" id="order_print_out">Chop etish</a>
-          <a href="./order2.html" onclick="closeModal()" class="order_close" id="close_modal">Yopish</a>
+
+        <div class="endorder_modal-order" id="endorder_modal-order">
+          <div class="order_modal-header">
+            <p>Buyurtmani chop etish</p>
+            <span   onclick="endOrderdCloseModal()" >x</span>
+          </div>
+          <p>bu yerda chek boladi....</p>
+          <div class="order_modal-footer">
+            <a href="./newProduct.html" class="order_print_out">Chop etish</a>
+            <button class="order_close"  onclick="endOrderdCloseModal()">Yopish</button>
+          </div>
         </div>
       </div>
     </div>

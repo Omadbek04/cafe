@@ -321,6 +321,10 @@ a {
   width: 100%;
 }
 /* Toggle buttons */
+.dropdown a {
+  text-align: center;
+  color: var(--primary-color-gray);
+}
 .toggle-btn {
   flex: 1;
   border: none;
@@ -491,7 +495,7 @@ a {
 
 /* order modal  ----------------------------------------------------*/
 .order_modal {
-  display: none ;
+  display: none;
   transition: all ease-in-out;
   position: absolute;
   top: 0;
@@ -500,7 +504,6 @@ a {
   height: 100%;
   z-index: 99;
   backdrop-filter: blur(2px);
-  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
@@ -579,7 +582,49 @@ a {
   background-color: transparent;
 }
 
-/* closemodal */
+/* endorder modal -------------------------------------------------------------------------- */
+
+.endorder_modal {
+  display: none;
+  transition: all ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+}
+
+.endorder_modal_wraper {
+  background: rgba(255, 255, 255, 1);
+  width: 470px;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.endorder_modal-close {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.endorder_modal-close,
+.endorder_modal-order p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.endorder_modal-order {
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+}
+
 
 /* media  */
 @media screen and (max-width: 1130px) {

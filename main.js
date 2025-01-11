@@ -91,8 +91,8 @@ buttons.forEach((button) => {
 // Modal elementini olish
 const modal = document.getElementById("order_modal");
 const buyurtma = document.getElementById("buyurtma");
-buyurtma.addEventListener("click", () => openModal());
-// Modalni yopish funksiyasi
+buyurtma?.addEventListener("click", () => openModal());
+
 const closeModal = (event) => {
   // Agar tashqi modaldan bosilgan bo'lsa yoki `Escape` tugmasi bosilgan bo'lsa, modalni yopish
   if (event?.target === modal || !event) {
@@ -100,14 +100,40 @@ const closeModal = (event) => {
   }
 };
 
-// ESC tugmasi bilan modalni yopish
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeModal();
-  }
-});
-
 // Modalni ochish (kerak bo'lsa)
 const openModal = () => {
   modal.style.display = "flex";
 };
+
+// end ordered modal >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Elementlarni olish
+const endorder_modal = document.getElementById("endorder_modal");
+const buyurtmani_yakunlash = document.getElementById("buyurtmani_yakunlash");
+const endorder_modal_close = document.getElementById("endorder_modal-close");
+const endorder_modal_order = document.getElementById("endorder_modal-order");
+
+// Modalni ochish funksiyasi
+const endOrderdOpenModal = () => {
+  endorder_modal.style.display = "flex";
+  endorder_modal_close.style.display = "flex"; // Asosiy modal bo'lim ko'rinadi
+  endorder_modal_order.style.display = "none"; // Ikkinchi bo'lim yashirin
+};
+
+// Modalni yopish funksiyasi
+const endOrderdCloseModal = (event) => {
+  if (event?.target === endorder_modal || !event) {
+    endorder_modal.style.display = "none";
+  }
+};
+
+// "Xa" tugmasini bosganda ishlaydigan funksiya
+const endorder_modal_orderOpen = () => {
+  endorder_modal_close.style.display = "none"; // Birinchi bo'lim yashirin
+  endorder_modal_order.style.display = "flex"; // Ikkinchi bo'lim ochiladi
+};
+
+// Bosish hodisasini biriktirish
+buyurtmani_yakunlash.addEventListener("click", () => {
+  endOrderdOpenModal();
+});
