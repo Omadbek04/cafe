@@ -285,6 +285,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .main__outlet_wrapper__card-body p {
   background: rgba(236, 246, 255, 1);
